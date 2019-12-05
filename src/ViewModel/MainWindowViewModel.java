@@ -29,7 +29,10 @@ public class MainWindowViewModel {
 
     private String DecodeMessage(String cipheredText)
     {
-        StringBuilder text = new StringBuilder(cipheredText);
+        StringBuilder text = new StringBuilder();
+
+        // TODO: algoritmus na lustenie transpozicnej sifry
+        text.append("Decoded text here");
 
         return text.toString();
     }
