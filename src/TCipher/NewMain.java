@@ -5,6 +5,9 @@
  */
 package TCipher;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kajza
@@ -17,8 +20,15 @@ public class NewMain {
     public static void main(String[] args) {
         int i;
         String OT, ZT;
-        Integer[] tkp = new Integer[]{5, 3, 2, 1, 4, 6, 7};
-        Integer[] test = new Integer[]{1, 3 ,2};
+     /*   Integer[] tkp = new Integer[]{5, 3, 2, 1, 4, 6, 7};
+        Integer[] test = new Integer[tkp.length];
+        List perm = new ArrayList<Integer>();
+        Permutations p = new Permutations();
+       /* 
+        test=(Integer[]) p.nthPerm(3, tkp);
+        System.out.print(tkp);
+        System.out.println(test);
+        
         OT = "sifrovaniepomocoutranspozicie";
         TranspositionRow tc = new TranspositionRow();
         
@@ -33,7 +43,7 @@ public class NewMain {
 
         */
         //tk = new TranspositionKey(tkp);
-        OT = "sifrovaniepomocoutranspozicie";
+      /*  OT = "sifrovaniepomocoutranspozicie";
         ZT = tc.encrypt(OT, tk);
         System.out.println("ZT: " + ZT);
         OT = tc.decrypt(ZT, tk);
@@ -49,9 +59,23 @@ public class NewMain {
         System.out.println(ZT);
         
         OT=tcc.decrypt(ZT, tk);
-        System.out.println(OT);
-        
-        
+        System.out.println(OT);*/
+        Math m= new Math();
+        int limit=0, min=4, max=5;
+        for(i=min; i<=max; i++){
+            limit+=m.factorial(i);
+        }
+      
+        TranspositionCol tc = new TranspositionCol();
+        OT= "sifrovaniepomocoutranspozicie";
+        Integer[] tk=new Integer[]{1, 2, 3, 5, 4};
+        TranspositionKey tkp= new TranspositionKey(tk);
+        ZT = tc.encrypt(OT, tkp);
+        String[] output = Cracker.crack(ZT);
+        System.out.println("\n limit " +limit);
+        for(i=0; i<limit; i++){
+        System.out.println(i + "  " + output[i]);
+        }
       
     }
     
