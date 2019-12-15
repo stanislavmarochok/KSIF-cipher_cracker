@@ -31,9 +31,9 @@ public class NewMain {
       
         TranspositionCol tc = new TranspositionCol();
        // OT= "sifrovaniepomocoutranspozicie";
-        
+        OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwith";
         OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwithmewehadabeautifulhotelroominthelatinquarteranditwasntevenexpensivewehadabalconywithawonderfulview";
-         OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwith";
+        
         BigramFitness bigram = new BigramFitness();
         
         Integer[] tk=new Integer[]{4, 1, 3, 6, 5, 2, 7};
