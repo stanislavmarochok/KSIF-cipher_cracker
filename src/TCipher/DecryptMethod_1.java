@@ -1,6 +1,6 @@
 package TCipher;
 
-public class Decrypt {
+public class DecryptMethod_1 {
 
     public static String[][] decryptWithoutKey(String ciphTxt, int minKeyLength, int maxKeyLength)
     {

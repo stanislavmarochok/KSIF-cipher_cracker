@@ -13,7 +13,7 @@ public class BigramFitness {
 
     public static String[][] findDecrypt(String txt, int min, int max) {
 
-        int limit=4;
+        int limit = 6;
 
         String[][] output = Cracker.crack(txt, min, max);
         String[][] finArr = new String[limit][2];
