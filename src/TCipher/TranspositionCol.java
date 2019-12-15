@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class TranspositionCol {
         
-    public String encrypt(String pt, Key k) {
+    public static String encrypt(String pt, Key k) {
         
         TranspositionKey mk = (TranspositionKey) k;
 

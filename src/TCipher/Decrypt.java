@@ -7,6 +7,13 @@ public class Decrypt {
         return BigramFitness.findDecrypt(ciphTxt, minKeyLength, maxKeyLength);
     }
 
+    public static String encryptText(String plainText, String key)
+    {
+        Integer[] intKey = convertKey(key);
+
+        return TranspositionCol.encrypt(plainText, new TranspositionKey(intKey));
+    }
+
     public static String decryptWithKey(String cipheredText, String key)
     {
         Integer[] intKey = convertKey(key);

@@ -19,9 +19,6 @@ public class MainWindowViewModel {
     private TextArea textCipheredText;
 
     @FXML
-    private CheckBox cbKnowKey;
-
-    @FXML
     private TextField txtKeyField;
 
     @FXML
@@ -35,9 +32,9 @@ public class MainWindowViewModel {
     {
         textDecodedText.setText("");
 
-        if (cbKnowKey.isSelected())
+        if (!txtKeyField.getText().isEmpty())
         {
-            textDecodedText.appendText(Decrypt.decryptWithKey(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s","")) + '\n');
+            textDecodedText.appendText(Decrypt.decryptWithKey(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s","")));
             return;
         }
 
@@ -47,6 +44,18 @@ public class MainWindowViewModel {
         {
             textDecodedText.appendText((i + 1) + " - " + decryptedText[i][1] + " - " + decryptedText[i][0] + '\n');
         }
+    }
 
+
+    @FXML
+    private void EncryptTextButtonClicked()
+    {
+        textDecodedText.setText("");
+
+        if (!txtKeyField.getText().isEmpty())
+        {
+            textDecodedText.appendText(Decrypt.encryptText(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s","")));
+            return;
+        }
     }
 }
