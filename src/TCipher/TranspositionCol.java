@@ -15,10 +15,8 @@ public class TranspositionCol {
         
     public String encrypt(String pt, Key k) {
         
-        
         TranspositionKey mk = (TranspositionKey) k;
-        
-        
+
         int i;
         StringBuilder pt2 = new StringBuilder(pt);
         int missing =  mk.blockSize - (pt.length() % mk.blockSize);
@@ -33,6 +31,7 @@ public class TranspositionCol {
         System.out.println("Pocet doplnenych znakov:" + missing);
         String output= new String(pt2);
         System.out.println(output);
+
         char[][] c=new char[output.length()/mk.blockSize][mk.blockSize];
         int count=0;
         for(i=0; i<output.length()/mk.blockSize; i++){
@@ -61,7 +60,7 @@ public class TranspositionCol {
     }
     
     
-      public String decrypt(String pt, Key k) {
+      public static String decrypt(String pt, Key k) {
     TranspositionKey mk = (TranspositionKey) k;
         
         int i;

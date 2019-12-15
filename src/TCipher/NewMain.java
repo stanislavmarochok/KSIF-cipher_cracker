@@ -33,13 +33,13 @@ public class NewMain {
        // OT= "sifrovaniepomocoutranspozicie";
         OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwith";
         OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwithmewehadabeautifulhotelroominthelatinquarteranditwasntevenexpensivewehadabalconywithawonderfulview";
-        
+      /*
         BigramFitness bigram = new BigramFitness();
         
         Integer[] tk=new Integer[]{4, 1, 3, 6, 5, 2, 7};
         TranspositionKey tkp= new TranspositionKey(tk);
         ZT = tc.encrypt(OT, tkp);
-        String[] output = Cracker.crack(ZT, min, max);
+        String[][] output = Cracker.crack(ZT, min, max);
         Double fit = bigram.Fitness(OT);
         
      //   System.out.println(fit);
@@ -61,6 +61,7 @@ public class NewMain {
       //  for(i=0; i<limit; i++){
         System.out.println(i + "  " + output[(int)minimF]);
       //  }
+      */
       
     }
     

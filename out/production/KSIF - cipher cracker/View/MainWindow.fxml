@@ -17,7 +17,7 @@
             <Font name="Arial Black" size="33.0" />
          </font>
       </Label>
-         <Button fx:id="btnDecodeText" layoutX="728.0" layoutY="223.0" mnemonicParsing="false" onAction="#DecryptText" prefHeight="59.0" prefWidth="224.0" text="Decode Text">
+         <Button fx:id="btnDecodeText" layoutX="728.0" layoutY="223.0" mnemonicParsing="false" onAction="#DecryptTextButtonClicked" prefHeight="59.0" prefWidth="224.0" text="Decode Text">
             <font>
                <Font name="System Bold" size="19.0" />
             </font></Button>
@@ -27,7 +27,7 @@
             <font>
                <Font size="23.0" />
             </font></CheckBox>
-         <TextField fx:id="txtKeyField" layoutX="224.0" layoutY="231.0" prefHeight="42.0" prefWidth="333.0" />
+         <TextField fx:id="txtKeyField" layoutX="224.0" layoutY="231.0" prefHeight="42.0" prefWidth="268.0" />
    </children>
 </Pane>
 </VBox>

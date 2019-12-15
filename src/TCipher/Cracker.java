@@ -14,7 +14,7 @@ import java.util.List;
  * @author kajza
  */
 public class Cracker {
-    public static String[] crack(String str, int min, int max){
+    public static String[][] crack(String str, int min, int max){
         int count=0;
         MathHelp m = new MathHelp();
         int limit=0, i;
@@ -24,17 +24,14 @@ public class Cracker {
         }
         
         
-        String[] output=new String[limit], returnoutput= new String[limit];
+        String[][] output = new String[limit][2], returnoutput = new String[limit][2];
         
         for(i=min; i<=max; i++){
-        output=AllStrings.allStrings(str, i);
-        for(int j=0; j<output.length; j++){
-            returnoutput[count++]=output[j];
-        }
-        
-        
-        
-        
+            output=AllStrings.allStrings(str, i);
+
+            for(int j=0; j<output.length; j++){
+                returnoutput[count++] = output[j];
+            }
         }
         
      return returnoutput;   

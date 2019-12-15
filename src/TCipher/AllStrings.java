@@ -5,6 +5,7 @@
  */
 package TCipher;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
  * @author kajza
  */
 public class AllStrings {
-    public static String[] allStrings(String str, int len){
+    public static String[][] allStrings(String str, int len){
         MathHelp m = new MathHelp();
         TranspositionCol tc = new TranspositionCol();
         int n=0, i=0;
@@ -20,7 +21,7 @@ public class AllStrings {
         
         Integer[] key;
         int limit=m.factorial(len);
-        String[] output = new String[limit];
+        String[][] output = new String[limit][2];
 
         Integer[] keyperm =new Integer[len];
         for(i=0; i<len; i++){
@@ -33,12 +34,10 @@ public class AllStrings {
         
         
         for(i=0; i<limit; i++){
-        key=(Integer[])perms.get(i);
-   //     for(int j=0; j<5; j++){
-   //         System.out.print(key[j]);
-   //    }
-        TranspositionKey tk = new TranspositionKey(key);
-        output[i]=tc.decrypt(str, tk);
+            key=(Integer[])perms.get(i);
+            TranspositionKey tk = new TranspositionKey(key);
+            output[i][0]=tc.decrypt(str, tk);
+            output[i][1]=Arrays.toString(key);
         }
         return output;
     }
