@@ -7,7 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-public class MainWindowViewModel {
+public class MainController {
 
     @FXML
     private Label lblTitle;

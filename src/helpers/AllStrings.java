@@ -16,33 +16,32 @@ import java.util.List;
  * @author kajza
  */
 public class AllStrings {
+
     public static String[][] allStrings(String str, int len){
-        MathHelp m = new MathHelp();
-        TranspositionCol tc = new TranspositionCol();
-        int n=0, i=0;
+
+        int n = 0, i = 0;
         Permutations p = new Permutations();
         
         Integer[] key;
-        int limit=m.factorial(len);
+        int limit = MathHelp.factorial(len);
         String[][] output = new String[limit][2];
 
-        Integer[] keyperm =new Integer[len];
-        for(i=0; i<len; i++){
-            keyperm[i]=i+1;
+        Integer[] keyperm = new Integer[len];
+        for(i = 0; i < len; i++){
+            keyperm[i] = i + 1;
         }
         
-        List perms=p.allPerm(keyperm);
+        List perms = p.allPerm(keyperm);
         
-        for(i=0; i<limit; i++){
-            key=(Integer[])perms.get(i);
+        for(i = 0; i < limit; i++){
+            key = (Integer[])perms.get(i);
             TranspositionKey tk = new TranspositionKey(key);
-            output[i][0]=tc.decrypt(str, tk);
-            output[i][1]=Arrays.toString(key);
+            output[i][0] = TranspositionCol.decrypt(str, tk);
+            output[i][1] = Arrays.toString(key);
         }
+
         return output;
     }
-        
-        
-        
+
 }
 

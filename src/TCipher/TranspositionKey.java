@@ -11,21 +11,19 @@ import Helpers.Permutations;
  *
  * @author kajza
  */
-public class TranspositionKey implements Key{
+public class TranspositionKey {
 
     int blockSize;
     Integer[] encPerm;
     Integer[] decPerm;
 
     public TranspositionKey(Integer[] encPerm) {
-        
-        
-        
+
         this.blockSize = encPerm.length;
-        
-        this.encPerm=new Integer[this.blockSize];
-        for(int i=0; i<encPerm.length; i++){
-            this.encPerm[i]=encPerm[i]-1;
+        this.encPerm = new Integer[this.blockSize];
+
+        for(int i = 0; i < encPerm.length; i++){
+            this.encPerm[i] = encPerm[i] - 1;
         }
         
         this.decPerm = Permutations.inverse(this.encPerm);

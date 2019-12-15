@@ -14,21 +14,20 @@ import Helpers.MathHelp;
  */
 public class Cracker {
     public static String[][] crack(String str, int min, int max){
+
         int count=0;
-        MathHelp m = new MathHelp();
-        int limit=0, i;
+        int limit=0;
         
-        for(i=min; i<=max; i++){
-            limit+=m.factorial(i);    //pocet moznych klucov a stringov
+        for(int i = min; i <= max; i++){
+            limit += MathHelp.factorial(i);    //pocet moznych klucov a stringov
         }
-        
-        
+
         String[][] output = new String[limit][2], returnoutput = new String[limit][2];
         
-        for(i=min; i<=max; i++){
-            output=AllStrings.allStrings(str, i);
+        for(int i = min; i <= max; i++){
+            output = AllStrings.allStrings(str, i);
 
-            for(int j=0; j<output.length; j++){
+            for(int j = 0; j < output.length; j++){
                 returnoutput[count++] = output[j];
             }
         }
