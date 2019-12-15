@@ -1,7 +1,6 @@
-package helpers;
+package Helpers;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Bigram {

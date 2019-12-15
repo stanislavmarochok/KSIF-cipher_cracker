@@ -1,7 +1,7 @@
-package ViewModel;
+package main;
 
-import TCipher.DecryptMethod_1;
-import TCipher.DecryptMethod_2;
+import Decryption.DecryptMethod_1;
+import Decryption.DecryptMethod_2;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

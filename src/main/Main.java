@@ -1,8 +1,6 @@
 package main;
 
-import ViewModel.MainWindowViewModel;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,11 +10,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/MainWindow.fxml"));
-        //loader.setController(new MainWindowViewModel());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
         Parent root = loader.load();
-        //primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("KSIF - Transposition Cipher Decoder");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

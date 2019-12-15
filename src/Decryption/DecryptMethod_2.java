@@ -1,4 +1,4 @@
-package TCipher;
+package Decryption;
 
 public class DecryptMethod_2 {
 

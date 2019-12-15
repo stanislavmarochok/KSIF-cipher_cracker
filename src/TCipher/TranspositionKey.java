@@ -5,6 +5,8 @@
  */
 package TCipher;
 
+import Helpers.Permutations;
+
 /**
  *
  * @author kajza

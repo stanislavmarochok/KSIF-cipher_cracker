@@ -1,6 +1,8 @@
-package TCipher;
+package Decryption;
 
-import helpers.Helper;
+import TCipher.TranspositionCol;
+import TCipher.TranspositionKey;
+import Helpers.Helper;
 
 public class DecryptMethod_1 {
 

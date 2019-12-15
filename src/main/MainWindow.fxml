@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="734.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewModel.MainWindowViewModel">
+<VBox prefHeight="734.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainWindowViewModel">
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.121">
    <children>
          <Pane prefHeight="68.0" prefWidth="971.0" style="-fx-background-color: #FFDE64;" />
-         <Pane layoutY="69.0" prefHeight="175.0" prefWidth="971.0" style="-fx-background-color: #CBFFB3;" />
-         <Pane layoutY="410.0" prefHeight="329.0" prefWidth="971.0" style="-fx-background-color: #CBFFB3;" />
+         <Pane layoutY="69.0" prefHeight="175.0" prefWidth="971.0" style="-fx-background-color: #FBFFA2;" />
+         <Pane layoutY="410.0" prefHeight="329.0" prefWidth="971.0" style="-fx-background-color: #FBFFA2;" />
       <Label fx:id="lblTitle" layoutX="19.0" layoutY="8.0" prefHeight="59.0" prefWidth="666.0" text="Transposition cipher decoder">
          <font>
             <Font name="Nirmala UI Bold" size="33.0" />
@@ -59,7 +59,7 @@
          </Label>
          <ComboBox fx:id="comBoxMin" layoutX="607.0" layoutY="375.0" onAction="#ComboBoxValueChanged" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #76E0FF;" />
          <ComboBox fx:id="comBoxMax" layoutX="829.0" layoutY="374.0" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #4BF7FF;" />
-         <Button fx:id="btnDecodeText" layoutX="474.0" layoutY="313.0" mnemonicParsing="false" onAction="#DecryptTextButtonClicked" prefHeight="51.0" prefWidth="425.0" style="-fx-background-color: #FFDE76;" text="Decode Text (2)">
+         <Button fx:id="btnDecodeText" layoutX="474.0" layoutY="313.0" mnemonicParsing="false" onAction="#DecryptTextButtonClicked_2" prefHeight="51.0" prefWidth="425.0" style="-fx-background-color: #FFDE76;" text="Decode Text (2)">
             <font>
                <Font name="System Bold" size="24.0" />
             </font>
