@@ -5,6 +5,11 @@
  */
 package TCipher;
 
+import helpers.Bigram;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  * @author kajza
@@ -17,41 +22,45 @@ public class NewMain {
     public static void main(String[] args) {
         int i;
         String OT, ZT;
-        Integer[] tkp = new Integer[]{5, 3, 2, 1, 4, 6, 7};
-        Integer[] test = new Integer[]{1, 3 ,2};
-        OT = "sifrovaniepomocoutranspozicie";
-        TranspositionRow tc = new TranspositionRow();
-        
-       TranspositionKey tk = new TranspositionKey(tkp);
-       TranspositionKey ttt = new TranspositionKey(tkp);
-        
-        /*
-        ZT = tc.encrypt(OT, tk);
-        System.out.println("ZT: " + ZT);
-        OT = tc.decrypt(ZT, tk);
-        System.out.println("OT: " + OT);
-
-        */
-        //tk = new TranspositionKey(tkp);
-        OT = "sifrovaniepomocoutranspozicie";
-        ZT = tc.encrypt(OT, tk);
-        System.out.println("ZT: " + ZT);
-        OT = tc.decrypt(ZT, tk);
-        System.out.println("OT: " + OT);
-        
-        
-        
+    
+        MathHelp m= new MathHelp();
+        int limit=0, min=5, max=8;
+        for(i=min; i<=max; i++){
+            limit+=m.factorial(i);
+        }
       
-        OT = "sifrovaniepomocoutranspozicie";
-        TranspositionCol tcc = new TranspositionCol();
-      
-        ZT=tcc.encrypt(OT, tk);
-        System.out.println(ZT);
+        TranspositionCol tc = new TranspositionCol();
+       // OT= "sifrovaniepomocoutranspozicie";
+        OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwith";
+        OT="ijustreturnedfromthegreatestsummervacationitwassofantasticineverwantedittoendispenteightdaysinparisfrancemybestfriendshenryandstevewentwithmewehadabeautifulhotelroominthelatinquarteranditwasntevenexpensivewehadabalconywithawonderfulview";
         
-        OT=tcc.decrypt(ZT, tk);
-        System.out.println(OT);
+        BigramFitness bigram = new BigramFitness();
         
+        Integer[] tk=new Integer[]{4, 1, 3, 6, 5, 2, 7};
+        TranspositionKey tkp= new TranspositionKey(tk);
+        ZT = tc.encrypt(OT, tkp);
+        String[] output = Cracker.crack(ZT, min, max);
+        Double fit = bigram.Fitness(OT);
         
+     //   System.out.println(fit);
+        double minimV=1000.0;
+        double minimF=0.0;
+        for(i=0; i<limit; i++){
+        fit = bigram.Fitness(output[i]);
+        
+        if(fit<minimV){
+            minimV=fit;
+            minimF=(double)i;
+        }
+        
+   //     System.out.println(fit);
+        }
+        System.out.println("\n limit " +limit);
+        System.out.println("min " +minimF + " value " +minimV);
+        
+      //  for(i=0; i<limit; i++){
+        System.out.println(i + "  " + output[(int)minimF]);
+      //  }
       
     }
     

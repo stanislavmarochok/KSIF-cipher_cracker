@@ -68,7 +68,7 @@ public class TranspositionCol {
         StringBuilder pt2 = new StringBuilder(pt);
 
         String output= new String(pt2);
-        System.out.println(output);
+     //   System.out.println(output);
         char[][] c=new char[mk.blockSize][output.length()/mk.blockSize];
         int count=0;
         for(i=0; i<mk.blockSize; i++){
@@ -82,7 +82,7 @@ public class TranspositionCol {
        // System.out.println(Arrays.deepToString(c));
         
         char[] out= new char[output.length()];
-        count=output.length()-1;
+        
         count=0;
         int l;
         for(int j=0; j<output.length()/mk.blockSize; j++){
