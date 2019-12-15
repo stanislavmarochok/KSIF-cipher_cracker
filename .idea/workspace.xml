@@ -66,21 +66,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainWindow.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainWindow.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/MainWindow.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="167" selection-start-line="22" selection-start-column="167" selection-end-line="22" selection-end-column="167" />
+              <caret line="22" column="166" selection-start-line="22" selection-start-column="166" selection-end-line="22" selection-end-column="166" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="88" column="49" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
+            <state relative-caret-position="26">
+              <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,8 +141,8 @@
         <option value="$PROJECT_DIR$/src/Helpers/Permutations.java" />
         <option value="$PROJECT_DIR$/src/TCipher/TranspositionKey.java" />
         <option value="$PROJECT_DIR$/src/TCipher/TranspositionCol.java" />
-        <option value="$PROJECT_DIR$/src/main/MainWindow.fxml" />
         <option value="$PROJECT_DIR$/src/main/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/MainWindow.fxml" />
       </list>
     </option>
   </component>
@@ -343,12 +343,12 @@
       <workItem from="1575670156176" duration="2325000" />
       <workItem from="1576318134809" duration="12849000" />
       <workItem from="1576407897860" duration="14938000" />
-      <workItem from="1576426348556" duration="8297000" />
+      <workItem from="1576426348556" duration="8899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45368000" />
+    <option name="totallyTimeSpent" value="45970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="141" width="1936" height="1066" extended-state="6" />
@@ -789,23 +789,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainWindow.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="167" selection-start-line="22" selection-start-column="167" selection-end-line="22" selection-end-column="167" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="88" column="49" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
+        <state relative-caret-position="26">
+          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainWindow.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="166" selection-start-line="22" selection-start-column="166" selection-end-line="22" selection-end-column="166" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
 </project>
