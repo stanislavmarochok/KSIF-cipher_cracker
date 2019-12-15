@@ -14,13 +14,13 @@ import java.util.List;
  * @author kajza
  */
 public class Cracker {
-    public static String[] crack(String str){
-        int min=4, max=5, count=0;
-        Math m = new Math();
+    public static String[] crack(String str, int min, int max){
+        int count=0;
+        MathHelp m = new MathHelp();
         int limit=0, i;
         
         for(i=min; i<=max; i++){
-            limit+=m.factorial(i);
+            limit+=m.factorial(i);    //pocet moznych klucov a stringov
         }
         
         

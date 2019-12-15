@@ -1,7 +1,7 @@
 package TCipher;
 
 
-public class Math {
+public class MathHelp {
 
     public static boolean isPrime(int input) {
         if (input % 2 == 0) {

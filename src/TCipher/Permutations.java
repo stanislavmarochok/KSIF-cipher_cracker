@@ -28,7 +28,7 @@ public class Permutations {
     }
      
      public static List allPerm(Object input[]) {
-        List<Object[]> retVal = new ArrayList(Math.factorial(input.length));
+        List<Object[]> retVal = new ArrayList(MathHelp.factorial(input.length));
         allPerm(0, input, retVal);
         return retVal;
     }

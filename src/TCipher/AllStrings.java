@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class AllStrings {
     public static String[] allStrings(String str, int len){
-        Math m = new Math();
+        MathHelp m = new MathHelp();
         TranspositionCol tc = new TranspositionCol();
         int n=0, i=0;
         Permutations p = new Permutations();
