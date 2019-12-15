@@ -43,26 +43,26 @@ public class MainController {
 
         if (!txtKeyField.getText().isEmpty())
         {
-            long startTime = System.nanoTime();
+            long startTime = System.currentTimeMillis();
                 String str = DecryptMethod_1.decryptWithKey(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s",""));
-            long endTime = System.nanoTime();
+            long elapsedTimeMillis = System.currentTimeMillis() - startTime;
+            float elapsedTimeSec = elapsedTimeMillis/1000F;
 
-            long duration = (endTime - startTime);
-            textDecodedText.appendText("Time spend: " + duration + "ns \n" + str);
+            textDecodedText.appendText("Time spend: " + elapsedTimeMillis + "ms (" + elapsedTimeSec + "s) \n" + str);
             return;
         }
 
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
             String decryptedText[][] =
                 DecryptMethod_1.decryptWithoutKey(
                     textCipheredText.getText().replaceAll("\\s","").toLowerCase(),
                     comBoxMin.getValue() != null ? (int)comBoxMin.getValue() : 1,
                     comBoxMax.getValue() != null ? (int)comBoxMax.getValue() : 7
                 );
-        long endTime = System.nanoTime();
+        long elapsedTimeMillis = System.currentTimeMillis() - startTime;
+        float elapsedTimeSec = elapsedTimeMillis/1000F;
 
-        long duration = (endTime - startTime);
-        textDecodedText.appendText("Time spend: " + duration + "ns \n");
+        textDecodedText.appendText("Time spend: " + elapsedTimeMillis + "ms (" + elapsedTimeSec + "s) \n");
 
         for (int i = 0; i < decryptedText.length; i++)
         {
@@ -77,26 +77,26 @@ public class MainController {
 
         if (!txtKeyField.getText().isEmpty())
         {
-            long startTime = System.nanoTime();
+            long startTime = System.currentTimeMillis();
                 String str = DecryptMethod_2.decryptWithKey(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s",""));
-            long endTime = System.nanoTime();
+            long elapsedTimeMillis = System.currentTimeMillis() - startTime;
+            float elapsedTimeSec = elapsedTimeMillis/1000F;
 
-            long duration = (endTime - startTime);
-            textDecodedText.appendText("Time spend: " + duration + "ns \n" + str);
+            textDecodedText.appendText("Time spend: " + elapsedTimeMillis + "ms (" + elapsedTimeSec + "s) \n" + str);
             return;
         }
 
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
             String decryptedText[][] =
                 DecryptMethod_2.decryptWithoutKey(
                         textCipheredText.getText().replaceAll("\\s","").toLowerCase(),
                         comBoxMin.getValue() != null ? (int)comBoxMin.getValue() : 1,
                         comBoxMax.getValue() != null ? (int)comBoxMax.getValue() : 7
                 );
-        long endTime = System.nanoTime();
+        long elapsedTimeMillis = System.currentTimeMillis() - startTime;
+        float elapsedTimeSec = elapsedTimeMillis/1000F;
 
-        long duration = (endTime - startTime);
-        textDecodedText.appendText("Time spend: " + duration + "ns \n");
+        textDecodedText.appendText("Time spend: " + elapsedTimeMillis + "ms (" + elapsedTimeSec + "s) \n");
 
         for (int i = 0; i < decryptedText.length; i++)
         {
@@ -111,12 +111,8 @@ public class MainController {
 
         if (!txtKeyField.getText().isEmpty())
         {
-            long startTime = System.nanoTime();
-                String str = DecryptMethod_1.encryptText(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s",""));
-            long endTime = System.nanoTime();
-
-            long duration = (endTime - startTime);
-            textDecodedText.appendText("Time spend: " + duration + "ns \n" + str);
+            String str = DecryptMethod_1.encryptText(textCipheredText.getText().replaceAll("\\s",""), txtKeyField.getText().replaceAll("\\s",""));
+            textDecodedText.appendText(str);
             return;
         }
     }

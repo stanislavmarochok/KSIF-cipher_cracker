@@ -13,8 +13,8 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.121">
    <children>
          <Pane prefHeight="68.0" prefWidth="971.0" style="-fx-background-color: #FFDE64;" />
-         <Pane layoutY="69.0" prefHeight="175.0" prefWidth="971.0" style="-fx-background-color: #FBFFA2;" />
-         <Pane layoutY="410.0" prefHeight="329.0" prefWidth="971.0" style="-fx-background-color: #FBFFA2;" />
+         <Pane layoutY="69.0" prefHeight="175.0" prefWidth="971.0" style="-fx-background-color: #CDB8FF;" />
+         <Pane layoutY="410.0" prefHeight="329.0" prefWidth="971.0" style="-fx-background-color: #CDB8FF;" />
       <Label fx:id="lblTitle" layoutX="19.0" layoutY="8.0" prefHeight="59.0" prefWidth="666.0" text="Transposition cipher decoder">
          <font>
             <Font name="Nirmala UI Bold" size="33.0" />
